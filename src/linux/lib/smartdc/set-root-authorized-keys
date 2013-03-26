@@ -10,6 +10,9 @@ if [[ ! -f /root/.ssh/authorized_keys ]]; then
     echo "${authorized_keys}" > /root/.ssh/authorized_keys
     chmod 700 /root/.ssh
     chmod 600 /root/.ssh/authorized_keys
+  else
+    echo "mdata-get root_authorized_keys returned nothing"
+    exit 1
   fi
 fi
 
